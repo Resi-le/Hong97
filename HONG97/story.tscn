@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqt7nkgimbs6i"]
+
+[ext_resource type="Script" uid="uid://bfbc2vknk5esm" path="res://story.gd" id="1_27gb3"]
+[ext_resource type="Texture2D" uid="uid://chnmjp4u7wkt7" path="res://Sprite/Texture/story-1.png" id="2_bwkhw"]
+[ext_resource type="FontFile" uid="uid://6smtfaxr4nlv" path="res://Font/StarDust.ttf" id="3_bwkhw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwkhw"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_27gb3")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 648.0
+offset_bottom = 480.0
+
+[node name="StoryIMG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 320.0
+texture = ExtResource("2_bwkhw")
+expand_mode = 1
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 576.0
+offset_bottom = 448.0
+focus_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_bwkhw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_bwkhw")
+bbcode_enabled = true
+text = "2025년이 왔다. 
+전국에서 더러운 유저들이 “롤백”를 외치며 떼로 몰려온다."
+vertical_alignment = 1
+
+[connection signal="gui_input" from="Text" to="." method="_on_text_gui_input"]

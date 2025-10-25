@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://fmpyqu4xf41o"]
+
+[ext_resource type="Texture2D" uid="uid://pc61vkvrvjeg" path="res://Sprite/MT/Movement-1.png" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://bxvxdno7g6meg" path="res://Sprite/MT/Movement-2.png" id="2_dtqjt"]
+[ext_resource type="Texture2D" uid="uid://ddajnfk782msu" path="res://Sprite/MT/Movement-3.png" id="3_5ncpa"]
+[ext_resource type="Texture2D" uid="uid://c21sad4cmhtf6" path="res://Sprite/MT/Movement-4.png" id="4_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://cwtvpkongxp5c" path="res://Sprite/MT/Movement-5.png" id="5_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://c7je5f1n8xieh" path="res://Sprite/MT/Movement-6.png" id="6_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://bl7260mo8y81h" path="res://Sprite/MT/Movement-7.png" id="7_l6ohk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kpjcp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xhfnw")
+}],
+"loop": true,
+"name": &"Movement-Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dtqjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5ncpa")
+}],
+"loop": true,
+"name": &"Movement-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wi0c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hp6x6")
+}],
+"loop": true,
+"name": &"Movement-Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3tkgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l6ohk")
+}],
+"loop": true,
+"name": &"Movement-Up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kne1u"]
+size = Vector2(28, 66)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, 7.62939e-06)
+scale = Vector2(0.0998232, 0.0998232)
+sprite_frames = SubResource("SpriteFrames_kpjcp")
+animation = &"Movement-Up"
+frame_progress = 0.45924
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kne1u")
+debug_color = Color(0.879031, 0.843674, 0, 0.42)

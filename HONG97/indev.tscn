@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkasg3teavqsd"]
+
+[ext_resource type="Texture2D" uid="uid://dup8yhskdfcox" path="res://Sprite/Texture/IndevPlaceHolder.png" id="1_gxfj3"]
+[ext_resource type="Script" uid="uid://o5gnfb6hxm1y" path="res://indev.gd" id="2_iq5bd"]
+
+[node name="Indev" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+texture = ExtResource("1_gxfj3")
+script = ExtResource("2_iq5bd")
