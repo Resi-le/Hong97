@@ -29,7 +29,7 @@ func _on_text_gui_input(event: InputEvent) -> void:
 		if current_line_index < dialogue_lines.size():
 			change_text_with_fade()
 		else:
-			FadeManager.fade_to_scene("res://indev.tscn", 0.5)
+			FadeManager.fade_to_scene("res://MainGame.tscn", 0.5)
 func change_text_with_fade():
 	is_fading_text = true
 	var tween = create_tween()

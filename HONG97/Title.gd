@@ -6,7 +6,7 @@ var dialogue_lines = [
 	"[font=res://Font/Unifont.ttf]製造·販売\n麗始蕊[/font]\n(Resi-le)\n[font=res://Font/Unifont.ttf]版權所有\n\n允許複製[/font]",
 	"[font_size=25]REMIX WANTED![/font_size]\n\n[left][font_size=25]I will accept remix and relase source code on github. (But please do not make virus)\nI welcome any kind of remix\nso make your own remix.[/font_size][/left]\n",
 	"[left][font_size=25]Would you like to make your own remix?[/font_size][left]\n[/left][font_size=25]I'm looking for remixers world-wide.\nIf you interested, don't ask to me and make your own[/font_size][/left]",
-	"[font_size=25]RESI-LE[/font_size]\n\n[left][font_size=25]FOR THE WHO TORTURED BY KXXAO.[/font_size][/left]",
+	"[font_size=25]RESI-LE[/font_size]\n\n[left][font_size=25]FOR THE WHO TORTURED BY KXXAO.\nNOT FOR SALE, THE CHARACTERS AND LOCATIONS APPEARING IN THIS GAME ARE NOT REAL.[/font_size][/left]",
 ]
 
 

@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://fmpyqu4xf41o"]
+[gd_scene load_steps=10 format=3 uid="uid://p70pixu25u53"]
 
-[ext_resource type="Script" uid="uid://cvq7jqxsr43f3" path="res://Player.gd" id="1_5ncpa"]
 [ext_resource type="Texture2D" uid="uid://pc61vkvrvjeg" path="res://Sprite/MT/Movement-1.png" id="1_xhfnw"]
 [ext_resource type="Texture2D" uid="uid://bxvxdno7g6meg" path="res://Sprite/MT/Movement-2.png" id="2_dtqjt"]
 [ext_resource type="Texture2D" uid="uid://ddajnfk782msu" path="res://Sprite/MT/Movement-3.png" id="3_5ncpa"]
@@ -43,14 +42,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_l6ohk")
-}],
-"loop": true,
-"name": &"Movement-Shoot",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("6_3tkgg")
 }, {
 "duration": 1.0,
@@ -62,22 +53,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kne1u"]
-size = Vector2(61.5, 120.125)
+size = Vector2(28, 66)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_5ncpa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.13687e-13, -1.13687e-13)
-scale = Vector2(0.2, 0.182)
+position = Vector2(-1.90735e-06, 7.62939e-06)
+scale = Vector2(0.0998232, 0.0998232)
 sprite_frames = SubResource("SpriteFrames_kpjcp")
-animation = &"Movement-Shoot"
+animation = &"Movement-Up"
+frame_progress = 0.45924
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kne1u")
 debug_color = Color(0.879031, 0.843674, 0, 0.42)
-
-[node name="Muzzle" type="Node2D" parent="."]
-position = Vector2(0, -64)
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
